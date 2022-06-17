@@ -65,4 +65,11 @@ class RestaurantTest {
                 ()->restaurant.removeFromMenu("French fries"));
     }
     //<<<<<<<<<<<<<<<<<<<<<<<MENU>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+    
+    
+    public void calculateOrderValue_should_return_388_when_soup_and_lasagne_are_ordered()
+    {
+    	int total = calculateOrderValue("Sweet corn soup", "Vegetable lasagne");
+    	assertEquals(388, total);    	
+    }
 }
