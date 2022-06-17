@@ -18,8 +18,10 @@ public class Restaurant {
     }
 
     public boolean isRestaurantOpen() {
-        return true;
-        //DELETE ABOVE STATEMENT AND WRITE CODE HERE
+    	
+    	LocalTime current = getCurrentTime();    	    	
+        return current.isAfter(openingTime) && current.isBefore(closingTime);
+        
     }
 
     public LocalTime getCurrentTime(){ return  LocalTime.now(); }
@@ -62,5 +64,10 @@ public class Restaurant {
     public String getName() {
         return name;
     }
-
+    
+    public String getLocation()
+    {
+    	return location;
+    }
+    
 }
